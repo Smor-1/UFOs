@@ -70,8 +70,8 @@ function updateFilters() {
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
 
-    Object.entries(filters).forEach(([filterId, elementValue]) => {
-      filteredData = filteredData.filter(row => row[filterId] === elementValue);
+    Object.entries(filters).forEach(([filterId, changedVal]) => {
+      filteredData = filteredData.filter(row => row[filterId] === changedVal);
     });
     
     // 10. Finally, rebuild the table using the filtered data
